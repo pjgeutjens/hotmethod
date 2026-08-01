@@ -1,0 +1,131 @@
+[
+  {
+    "batchId": "batch-01",
+    "displayName": "Kay Putri",
+    "fullName": "Heidi Widanti Refo Nicky Putri",
+    "initials": "KP",
+    "image": "/public/media/graduates/kay-putri.webp",
+    "imageSource": {
+      "url": "https://nadpilatesbarre.my.canva.site/bentangbahagiaxashta-partnership",
+      "label": "Kay Putri"
+    }
+  },
+  {
+    "batchId": "batch-01",
+    "displayName": "Noor Anugrahandina",
+    "fullName": "Noor Anugrahandina",
+    "initials": "NA",
+    "image": null,
+    "imageSource": null
+  },
+  {
+    "batchId": "batch-01",
+    "displayName": "Cindy Wowor",
+    "fullName": "Cindy Wowor",
+    "initials": "CW",
+    "image": "/public/media/graduates/cindy-wowor.webp",
+    "imageSource": {
+      "url": "https://nadpilatesbarre.my.canva.site/bentangbahagiaxashta-partnership",
+      "label": "Cindy Wowor"
+    }
+  },
+  {
+    "batchId": "batch-01",
+    "displayName": "Jessica Januarty",
+    "fullName": "Jessica Januarty",
+    "initials": "JJ",
+    "image": "/public/media/graduates/jessica-januarty.webp",
+    "imageSource": {
+      "url": "https://nadpilatesbarre.my.canva.site/bentangbahagiaxashta-partnership",
+      "label": "Jessica JJ"
+    }
+  },
+  {
+    "batchId": "batch-01",
+    "displayName": "Stefani Wibowo",
+    "fullName": "Stefani Wibowo",
+    "initials": "SW",
+    "image": "/public/media/graduates/stefani-wibowo.webp",
+    "imageSource": {
+      "url": "https://nadpilatesbarre.my.canva.site/bentangbahagiaxashta-partnership",
+      "label": "Stefani Huang"
+    }
+  },
+  {
+    "batchId": "batch-01",
+    "displayName": "Jane Haryono",
+    "fullName": "Jane Haryono",
+    "initials": "JH",
+    "image": "/public/media/graduates/jane-haryono.webp",
+    "imageSource": {
+      "url": "https://nadpilatesbarre.my.canva.site/bentangbahagiaxashta-partnership",
+      "label": "Jane Haryono"
+    }
+  },
+  {
+    "batchId": "batch-01",
+    "displayName": "Senny Desiana Medita",
+    "fullName": "Senny Desiana Medita",
+    "initials": "SD",
+    "image": "/public/media/graduates/senny-desiana-medita.webp",
+    "imageSource": {
+      "url": "https://nadpilatesbarre.my.canva.site/bentangbahagiaxashta-partnership",
+      "label": "Senny Achdiats"
+    }
+  },
+  {
+    "batchId": "batch-01",
+    "displayName": "Masayu Putri",
+    "fullName": "Masayu Putri",
+    "initials": "MP",
+    "image": "/public/media/graduates/masayu-putri.webp",
+    "imageSource": {
+      "url": "https://nadpilatesbarre.my.canva.site/bentangbahagiaxashta-partnership",
+      "label": "Masayu Putri"
+    }
+  },
+  {
+    "batchId": "batch-01",
+    "displayName": "Cut Amalia Andarini",
+    "fullName": "Cut Amalia Andarini",
+    "initials": "CA",
+    "image": "/public/media/graduates/cut-amalia-andarini.webp",
+    "imageSource": {
+      "url": "https://nadpilatesbarre.my.canva.site/bentangbahagiaxashta-partnership",
+      "label": "Cut Amalia"
+    }
+  },
+  {
+    "batchId": "batch-01",
+    "displayName": "Angie Ayu Natasha",
+    "fullName": "Angie Ayu Natasha",
+    "initials": "AN",
+    "image": "/public/media/graduates/angie-ayu-natasha.webp",
+    "imageSource": {
+      "url": "https://nadpilatesbarre.my.canva.site/bentangbahagiaxashta-partnership",
+      "label": "Angie Ayu"
+    }
+  },
+  {
+    "batchId": "batch-01",
+    "displayName": "Aisha Kirana",
+    "fullName": "Aisha Kirana",
+    "initials": "AK",
+    "image": "/public/media/graduates/aisha-kirana.webp",
+    "imageSource": {
+      "url": "https://nadpilatesbarre.my.canva.site/bentangbahagiaxashta-partnership",
+      "label": "Aisha Kirana"
+    }
+  },
+  {
+    "batchId": "batch-01",
+    "displayName": "Katya Aiko Kusuma",
+    "fullName": "Katya Aiko Kusuma",
+    "initials": "KA",
+    "image": "/public/media/graduates/katya-aiko-kusuma.webp",
+    "imageSource": {
+      "url": "https://nadpilatesbarre.my.canva.site/bentangbahagiaxashta-partnership",
+      "label": "Katya Aiko"
+    }
+  }
+]

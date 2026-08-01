@@ -1,0 +1,16 @@
+{
+  "name": "hotmethod",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "eleventy",
+    "build:pages": "SITE_URL=https://pjgeutjens.github.io/hotmethod SITE_PATH_PREFIX=/hotmethod/ SITE_NOINDEX=true eleventy",
+    "deploy:pages": "sh deploy/github-pages.sh",
+    "start": "eleventy --serve --port=4180",
+    "test": "npm run build && node --test"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6"
+  }
+}

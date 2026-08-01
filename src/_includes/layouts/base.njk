@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="{{ site.language }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ site.description }}">
+  <meta name="theme-color" content="#140e0a">
+  {% if deployment.noindex %}<meta name="robots" content="noindex, nofollow">{% endif %}
+  <title>{{ site.pageTitle }}</title>
+  <link rel="canonical" href="{{ deployment.siteUrl }}/">
+  <link rel="icon" href="{{ '/public/favicon.svg' | url }}" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="{{ site.locale }}">
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:title" content="{{ site.pageTitle }}">
+  <meta property="og:description" content="{{ site.description }}">
+  <meta property="og:url" content="{{ deployment.siteUrl }}/">
+  <meta property="og:image" content="{{ deployment.siteUrl }}{{ site.socialImage }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="{{ '/styles.css' | url }}">
+  <script type="module" src="{{ '/script.js' | url }}"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": {{ site.name | dump | safe }},
+    "url": "{{ deployment.siteUrl }}/",
+    "description": {{ site.description | dump | safe }},
+    "inLanguage": "{{ site.language }}"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  {{ content | safe }}
+</body>
+</html>

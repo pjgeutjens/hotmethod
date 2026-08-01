@@ -1,0 +1,15 @@
+[
+  {
+    "id": "batch-01",
+    "label": "Batch 01",
+    "name": "Batch 1",
+    "startDate": "2026-06-05",
+    "endDate": "2026-06-07",
+    "dateLabel": "05–07 Jun 2026",
+    "venue": "Union Yoga",
+    "location": "Jakarta, Indonesia",
+    "graduateCount": 12,
+    "status": "published",
+    "source": "https://id.linkedin.com/in/nadyarudianto"
+  }
+]
