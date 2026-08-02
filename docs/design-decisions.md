@@ -61,11 +61,17 @@ folder remains unassigned. On 1 Aug 2026, the owner instead directed the site to
 reuse portraits from the labelled certified-team grid in the Bentang Bahagia x
 Ashta partnership proposal. Eleven proposal labels correspond to the confirmed
 Batch 1 roster; their source labels remain in `graduates.json` while the
-definitive roster names control public presentation. Noor Anugrahandina is not
-represented in that proposal and retains the designed initial placeholder. The
-geometric lines belong only to that pending-photo placeholder and never overlay
-confirmed photography. The site must never infer an identity from facial
+definitive roster names control public presentation. On 2 Aug 2026, the owner
+identified the Google Photos file `IMG_4650.jpg` as Noor Anugrahandina; that
+explicit mapping supplies the twelfth portrait. Its studio background is
+adapted to the same campaign-brown field as the proposal portraits so the card
+belongs to the set. The site must never infer an identity from facial
 similarity.
+
+At the owner's direction on 2 Aug 2026, the pale garment fabric in Aisha
+Kirana's, Angie Ayu Natasha's and Jane Haryono's portraits is adapted to the
+campaign's dark ink. Each original garment silhouette remains intact; no logo
+is added, keeping Noor from becoming the only graduate without branded apparel.
 
 ## Content boundary
 

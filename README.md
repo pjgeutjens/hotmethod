@@ -32,8 +32,8 @@ local-asset checks.
 - `_site/` — generated output; never edit directly
 
 Eleven graduate portraits come from the labelled Bentang Bahagia x Ashta
-proposal. Noor Anugrahandina retains an intentional initial placeholder until a
-source-labelled portrait is available.
+proposal. Noor Anugrahandina's portrait comes from the owner-provided Google
+Photos file `IMG_4650.jpg`, identified by the owner on 2 Aug 2026.
 
 ## GitHub Pages review
 

@@ -15,8 +15,11 @@
     "displayName": "Noor Anugrahandina",
     "fullName": "Noor Anugrahandina",
     "initials": "NA",
-    "image": null,
-    "imageSource": null
+    "image": "/public/media/graduates/noor-anugrahandina.webp",
+    "imageSource": {
+      "url": "user-provided:google-photos/IMG_4650.jpg",
+      "label": "Noor Anugrahandina · IMG_4650.jpg · owner-confirmed 2 Aug 2026"
+    }
   },
   {
     "batchId": "batch-01",

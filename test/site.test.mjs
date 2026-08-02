@@ -22,15 +22,20 @@ test("renders the definitive twelve-person Batch 1 roster", () => {
   assert.match(html, /<dt>Graduates<\/dt><dd>12<\/dd>/);
 });
 
-test("uses only proposal-labelled graduate portraits", async () => {
+test("uses only source-mapped graduate portraits", async () => {
   const pictured = graduates.filter((graduate) => graduate.image);
   const pending = graduates.filter((graduate) => !graduate.image);
-  assert.equal(pictured.length, 11);
-  assert.deepEqual(pending.map((graduate) => graduate.displayName), ["Noor Anugrahandina"]);
-  assert.equal((html.match(/Portrait pending/g) || []).length, 1);
-  assert.equal((html.match(/graduate-portrait heat-\d is-pending/g) || []).length, 1);
-  for (const graduate of pictured) {
+  const noor = graduates.find((graduate) => graduate.displayName === "Noor Anugrahandina");
+  assert.equal(pictured.length, 12);
+  assert.deepEqual(pending, []);
+  assert.equal((html.match(/Portrait pending/g) || []).length, 0);
+  assert.equal((html.match(/graduate-portrait heat-\d is-pending/g) || []).length, 0);
+  assert.equal(noor.imageSource.url, "user-provided:google-photos/IMG_4650.jpg");
+  assert.match(noor.imageSource.label, /owner-confirmed 2 Aug 2026/);
+  for (const graduate of pictured.filter((graduate) => graduate !== noor)) {
     assert.equal(graduate.imageSource.url, "https://nadpilatesbarre.my.canva.site/bentangbahagiaxashta-partnership");
+  }
+  for (const graduate of pictured) {
     assert.ok(graduate.imageSource.label);
     assert.match(html, new RegExp(`alt="Portrait of ${graduate.displayName}"`));
     await readFile(new URL(`../src${graduate.image}`, import.meta.url));
