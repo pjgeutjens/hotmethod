@@ -1,0 +1,5 @@
+hotmethod.eboonad.com {
+	encode zstd gzip
+	root * /opt/hotmethod
+	file_server
+}

@@ -143,3 +143,15 @@ test("project output is generated separately", async () => {
   assert.ok(files.includes("styles.css"));
   assert.ok(files.includes("public"));
 });
+
+test("production discovery files use the canonical Hot Method hostname", async () => {
+  const [robots, sitemap] = await Promise.all([
+    readFile(new URL("../_site/robots.txt", import.meta.url), "utf8"),
+    readFile(new URL("../_site/sitemap.xml", import.meta.url), "utf8")
+  ]);
+  assert.match(html, /<link rel="canonical" href="https:\/\/hotmethod\.eboonad\.com\/">/);
+  assert.doesNotMatch(html, /name="robots" content="noindex/);
+  assert.match(robots, /Allow: \//);
+  assert.match(robots, /Sitemap: https:\/\/hotmethod\.eboonad\.com\/sitemap\.xml/);
+  assert.match(sitemap, /<loc>https:\/\/hotmethod\.eboonad\.com\/<\/loc>/);
+});

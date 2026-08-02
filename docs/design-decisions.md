@@ -7,7 +7,7 @@ The Hot Method is an independently buildable Eleventy graduation roster.
 Rudianto, current workshop details, booking, and contact. The sister site does
 not duplicate that material.
 
-The intended production hostname remains `https://hotmethod.eboonad.com/`. A
+The production hostname is `https://hotmethod.eboonad.com/`. A
 project-path-aware, `noindex` review build is published separately at
 `https://pjgeutjens.github.io/hotmethod/`; environment-backed build settings
 keep that temporary URL out of the eventual production configuration.

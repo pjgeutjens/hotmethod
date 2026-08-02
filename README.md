@@ -49,3 +49,15 @@ After an authorized source push, publish the generated `gh-pages` branch with:
 ```sh
 npm run deploy:pages
 ```
+
+## Production
+
+The canonical, indexable site is <https://hotmethod.eboonad.com/>. It is served
+as static files by Caddy on the shared eboonad VPS. After an authorized release:
+
+```sh
+deploy/vps.sh pgs@91.107.203.134
+```
+
+The one-time Caddy setup and complete verification checklist are documented in
+[`docs/deploy/VPS-SETUP.md`](docs/deploy/VPS-SETUP.md).
