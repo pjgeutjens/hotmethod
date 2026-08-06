@@ -8,8 +8,8 @@ const site = JSON.parse(await readFile(new URL("../src/_data/site.json", import.
 const copy = JSON.parse(await readFile(new URL("../src/_data/copy.json", import.meta.url), "utf8"));
 const batches = JSON.parse(await readFile(new URL("../src/_data/batches.json", import.meta.url), "utf8"));
 
-test("renders the definitive twelve-person Batch 1 roster", () => {
-  assert.equal(graduates.length, 12);
+test("renders the definitive thirteen-person Batch 1 roster", () => {
+  assert.equal(graduates.length, 13);
   assert.equal(batches.length, 1);
   assert.ok(graduates.every((graduate) => graduate.batchId === batches[0].id));
   assert.equal(batches[0].dateLabel, "05–07 Jun 2026");
@@ -19,20 +19,23 @@ test("renders the definitive twelve-person Batch 1 roster", () => {
   for (const graduate of graduates) {
     assert.match(html, new RegExp(graduate.displayName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
   }
-  assert.match(html, /<dt>Graduates<\/dt><dd>12<\/dd>/);
+  assert.match(html, /<dt>Graduates<\/dt><dd>13<\/dd>/);
 });
 
 test("uses only source-mapped graduate portraits", async () => {
   const pictured = graduates.filter((graduate) => graduate.image);
   const pending = graduates.filter((graduate) => !graduate.image);
   const noor = graduates.find((graduate) => graduate.displayName === "Noor Anugrahandina");
-  assert.equal(pictured.length, 12);
+  const pebetsi = graduates.find((graduate) => graduate.displayName === "Pebetsi Charnley");
+  assert.equal(pictured.length, 13);
   assert.deepEqual(pending, []);
   assert.equal((html.match(/Portrait pending/g) || []).length, 0);
   assert.equal((html.match(/graduate-portrait heat-\d is-pending/g) || []).length, 0);
   assert.equal(noor.imageSource.url, "user-provided:google-photos/IMG_4650.jpg");
   assert.match(noor.imageSource.label, /owner-confirmed 2 Aug 2026/);
-  for (const graduate of pictured.filter((graduate) => graduate !== noor)) {
+  assert.match(pebetsi.imageSource.url, /^user-provided:whatsapp\//);
+  assert.match(pebetsi.imageSource.label, /owner-confirmed 6 Aug 2026/);
+  for (const graduate of pictured.filter((graduate) => graduate !== noor && graduate !== pebetsi)) {
     assert.equal(graduate.imageSource.url, "https://nadpilatesbarre.my.canva.site/bentangbahagiaxashta-partnership");
   }
   for (const graduate of pictured) {
