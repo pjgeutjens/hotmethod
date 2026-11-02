@@ -32,47 +32,38 @@ permalink: index.html
       <img src="{{ '/public/media/batch-1-hero.webp' | url }}" alt="The Hot Method Strong Hot Pilates workshop at Union Yoga" width="658" height="1020">
       <figcaption><span>{{ batches[0].name }}</span> {{ copy.hero.imageCaption }}</figcaption>
     </figure>
-    <div class="hero-count" aria-label="{{ batches.length }} published batch">
+    <div class="hero-count" aria-label="{{ batches.length }} published {% if batches.length == 1 %}batch{% else %}batches{% endif %}">
       <strong>{{ batches.length }}</strong>
       <span>published<br>{% if batches.length == 1 %}batch{% else %}batches{% endif %}</span>
     </div>
   </section>
 
-  <section class="graduates section" id="batches" aria-labelledby="batches-title">
+  <div id="batches">
     {% for batch in batches %}
+    <section class="graduates section" aria-labelledby="{{ batch.id }}-title">
     <div class="section-heading">
       <div>
         <p class="eyebrow"><span></span> {{ batch.name }}</p>
-        <h2 id="batches-title">{{ batch.label }} {{ copy.batches.titleSuffix }}</h2>
+        <h2 id="{{ batch.id }}-title">{{ batch.label }} {{ batch.titleSuffix or copy.batches.titleSuffix }}</h2>
       </div>
       <dl class="batch-meta">
-        <div><dt>Workshop</dt><dd>{{ batch.dateLabel }}</dd></div>
-        <div><dt>Location</dt><dd>{{ batch.venue }} · {{ batch.location }}</dd></div>
+        {% if batch.dateLabel %}<div><dt>Workshop</dt><dd>{{ batch.dateLabel }}</dd></div>{% endif %}
+        {% if batch.venue %}<div><dt>Location</dt><dd>{{ batch.venue }} · {{ batch.location }}</dd></div>{% endif %}
+        {% if batch.participantCount %}<div><dt>Participants</dt><dd>{{ batch.participantCount }}</dd></div>{% endif %}
         <div><dt>Graduates</dt><dd>{{ batch.graduateCount }}</dd></div>
       </dl>
     </div>
-    <div class="graduate-grid">
-      {% for graduate in graduates | sortByDisplayName %}
-      {% if graduate.batchId == batch.id %}
-      <article class="graduate-card">
-        <div class="graduate-portrait heat-{{ loop.index0 % 4 }}{% if not graduate.image %} is-pending{% endif %}">
-          {% if graduate.image %}
-          <img src="{{ graduate.image | url }}" alt="Portrait of {{ graduate.displayName }}" loading="lazy" width="500" height="500">
-          {% else %}
-          <span aria-hidden="true">{{ graduate.initials }}</span>
-          <small>Portrait pending</small>
-          {% endif %}
-        </div>
-        <div class="graduate-name">
-          <h3>{{ graduate.displayName }}</h3>
-          {% if graduate.fullName != graduate.displayName %}<p>{{ graduate.fullName }}</p>{% endif %}
-        </div>
-      </article>
-      {% endif %}
-      {% endfor %}
-    </div>
+    {% if batch.participantCount %}<h3 class="roster-group-title">Graduates</h3>{% endif %}
+    {% set people = graduates %}
+    {% include "roster-grid.njk" %}
+    {% if batch.participantCount %}
+    <h3 class="roster-group-title">Participants</h3>
+    {% set people = participants %}
+    {% include "roster-grid.njk" %}
+    {% endif %}
+    </section>
     {% endfor %}
-  </section>
+  </div>
 
   <section class="handoff section" aria-labelledby="handoff-title">
     <p class="eyebrow"><span></span> {{ copy.handoff.eyebrow }}</p>

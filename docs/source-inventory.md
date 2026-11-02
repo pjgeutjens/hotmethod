@@ -2,6 +2,9 @@
 
 | Material | Source | Used for |
 |---|---|---|
+| Batch 1 completion status and dates | Owner-provided update, 2 Nov 2026 | Seven graduates, six participants; Pebetsi confirmed second to graduate, with exact date unspecified; existing portrait mappings and public names retained, supplied full names updated |
+| Batch 2 portraits | Owner-downloaded `Batch 2-20261102T093641Z-1-001.zip`, from shared Batch 2 Drive folder | Nineteen named-folder mappings; crop-only 600×750 WebP headshots; Hot Method shirt options selected for Franita, Ivana and Nanies; source paths and crop coordinates in `batch-02-portrait-crops.json`; original ZIP preserved |
+| Batch 2 roster and completion status | Owner-provided list, 2 Nov 2026 | Three graduates and sixteen participants; remedial status omitted publicly; portraits supplied in named participant folders, 2 Nov 2026 |
 | Definitive Batch 1 roster | User-provided list, 1 Aug 2026; Pebetsi Charnley added by owner direction, 6 Aug 2026 | `src/_data/graduates.json` |
 | Graduate portrait folder | User-provided Google Drive folder | Anonymous camera filenames; superseded for Batch 1 and not published |
 | Eleven labelled graduate portraits | `https://nadpilatesbarre.my.canva.site/bentangbahagiaxashta-partnership` plus owner reuse direction, 1 Aug 2026 | Local WebP portraits for every Batch 1 graduate represented in the proposal; pale garment fabric on Aisha, Angie and Jane adapted to campaign ink at the owner's direction, 2 Aug 2026 |

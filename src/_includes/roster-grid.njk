@@ -1,0 +1,20 @@
+<div class="graduate-grid">
+  {% for person in people | sortRoster %}
+  {% if person.batchId == batch.id %}
+      <article class="graduate-card">
+        <div class="graduate-portrait heat-{{ loop.index0 % 4 }}{% if not person.image %} is-pending{% endif %}">
+          {% if person.image %}
+          <img src="{{ person.image | url }}" alt="Portrait of {{ person.displayName }}" loading="lazy" width="600" height="750">
+          {% else %}
+          <span aria-hidden="true">{{ person.initials }}</span>
+          <small>Portrait pending</small>
+          {% endif %}
+        </div>
+        <div class="graduate-name">
+          <h4>{{ person.displayName }}</h4>
+          {% if person.fullName != person.displayName %}<p>{{ person.fullName }}</p>{% endif %}
+        </div>
+      </article>
+  {% endif %}
+  {% endfor %}
+</div>

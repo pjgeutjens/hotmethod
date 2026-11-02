@@ -8,10 +8,12 @@ const site = JSON.parse(await readFile(new URL("../src/_data/site.json", import.
 const copy = JSON.parse(await readFile(new URL("../src/_data/copy.json", import.meta.url), "utf8"));
 const batches = JSON.parse(await readFile(new URL("../src/_data/batches.json", import.meta.url), "utf8"));
 
+const participants = JSON.parse(await readFile(new URL("../src/_data/participants.json", import.meta.url), "utf8"));
+
 test("renders the definitive thirteen-person Batch 1 roster", () => {
-  assert.equal(graduates.length, 13);
-  assert.equal(batches.length, 1);
-  assert.ok(graduates.every((graduate) => graduate.batchId === batches[0].id));
+  assert.equal(graduates.filter((person) => person.batchId === "batch-01").length, 7);
+  assert.equal(batches.length, 2);
+  assert.ok(graduates.every((graduate) => batches.some((batch) => batch.id === graduate.batchId)));
   assert.equal(batches[0].dateLabel, "05–07 Jun 2026");
   assert.equal(batches[0].venue, "Union Yoga");
   assert.match(html, /05–07 Jun 2026/);
@@ -19,23 +21,23 @@ test("renders the definitive thirteen-person Batch 1 roster", () => {
   for (const graduate of graduates) {
     assert.match(html, new RegExp(graduate.displayName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
   }
-  assert.match(html, /<dt>Graduates<\/dt><dd>13<\/dd>/);
+  assert.match(html, /<dt>Graduates<\/dt><dd>7<\/dd>/);
 });
 
 test("uses only source-mapped graduate portraits", async () => {
-  const pictured = graduates.filter((graduate) => graduate.image);
+  const pictured = [...graduates, ...participants].filter((graduate) => graduate.image);
   const pending = graduates.filter((graduate) => !graduate.image);
   const noor = graduates.find((graduate) => graduate.displayName === "Noor Anugrahandina");
   const pebetsi = graduates.find((graduate) => graduate.displayName === "Pebetsi Charnley");
-  assert.equal(pictured.length, 13);
-  assert.deepEqual(pending, []);
+  assert.equal(pictured.length, 32);
+  assert.equal(pending.length, 0);
   assert.equal((html.match(/Portrait pending/g) || []).length, 0);
   assert.equal((html.match(/graduate-portrait heat-\d is-pending/g) || []).length, 0);
   assert.equal(noor.imageSource.url, "user-provided:google-photos/IMG_4650.jpg");
   assert.match(noor.imageSource.label, /owner-confirmed 2 Aug 2026/);
   assert.match(pebetsi.imageSource.url, /^user-provided:whatsapp\//);
   assert.match(pebetsi.imageSource.label, /owner-confirmed 6 Aug 2026/);
-  for (const graduate of pictured.filter((graduate) => graduate !== noor && graduate !== pebetsi)) {
+  for (const graduate of pictured.filter((graduate) => graduate.batchId === "batch-01" && graduate !== noor && graduate !== pebetsi)) {
     assert.equal(graduate.imageSource.url, "https://nadpilatesbarre.my.canva.site/bentangbahagiaxashta-partnership");
   }
   for (const graduate of pictured) {
@@ -93,16 +95,15 @@ test("does not imply a graduate ranking or certification order", () => {
   assert.doesNotMatch(html, /graduate-name[^>]*>\s*<span>/);
 });
 
-test("renders every batch alphabetically by public display name", () => {
-  for (const batch of batches) {
-    const expected = graduates
-      .filter((graduate) => graduate.batchId === batch.id)
-      .map((graduate) => graduate.displayName)
-      .sort((left, right) => left.localeCompare(right, "en", { sensitivity: "base" }));
-    const positions = expected.map((name) => html.indexOf(`>${name}</h3>`));
-    assert.ok(positions.every((position) => position >= 0));
-    assert.deepEqual(positions, [...positions].sort((left, right) => left - right));
-  }
+test("Batch 1 preserves the confirmed graduation order without inventing a date", () => {
+  const batch1 = html.split('aria-labelledby="batch-01-title">')[1].split('</section>')[0];
+  const [graduateMarkup, participantMarkup] = batch1.split('<h3 class="roster-group-title">Participants</h3>');
+  const names = markup => [...markup.matchAll(/<h4>([^<]+)<\/h4>/g)].map(match => match[1]);
+  assert.deepEqual(names(graduateMarkup), ["Jane Haryono", "Pebetsi Charnley", "Jessica Januarty", "Masayu Putri", "Noor Anugrahandina", "Kay Putri", "Aisha Kirana"]);
+  assert.deepEqual(names(participantMarkup), ["Angie Ayu Natasha", "Cindy Wowor", "Cut Amalia Andarini", "Katya Aiko Kusuma", "Senny Desiana Medita", "Stefani Wibowo"]);
+  assert.match(batch1, /Janeley Haryono/);
+  assert.match(batch1, /Pebetsi Makgalemele/);
+  assert.equal(graduates.find(person => person.displayName === "Pebetsi Charnley").graduationDate, null);
 });
 
 test("uses locally generated media references", async () => {
@@ -157,4 +158,38 @@ test("production discovery files use the canonical Hot Method hostname", async (
   assert.match(robots, /Allow: \//);
   assert.match(robots, /Sitemap: https:\/\/hotmethod\.eboonad\.com\/sitemap\.xml/);
   assert.match(sitemap, /<loc>https:\/\/hotmethod\.eboonad\.com\/<\/loc>/);
+});
+
+test("Batch 2 orders graduates by graduation date and participants alphabetically", () => {
+  const batch2 = html.slice(html.indexOf('<section class="graduates section" aria-labelledby="batch-02-title">'));
+  const groups = batch2.split('<h3 class="roster-group-title">Participants</h3>');
+  assert.equal(groups.length, 2);
+  const confirmed = graduates.filter(person => person.batchId === "batch-02");
+  assert.deepEqual(confirmed.map(person => person.displayName), ["Emi Endrawati", "Mutiara Chairunnisa", "Nanies Nuraini Herdirina"]);
+  assert.equal(participants.filter(person => person.batchId === "batch-02").length, 16);
+  assert.ok(participants.some(person => person.displayName === "Franita Yulianty"));
+  for (const [people, markup] of [[confirmed, groups[0]], [participants.filter(person => person.batchId === "batch-02"), groups[1]]]) {
+    const expected = people === confirmed
+      ? ["Nanies Nuraini Herdirina", "Emi Endrawati", "Mutiara Chairunnisa"]
+      : people.map(person => person.displayName).sort((a,b) => a.localeCompare(b, "en", { sensitivity: "base" }));
+    const actual = [...markup.matchAll(/<h4>([^<]+)<\/h4>/g)].map(match => match[1]);
+    assert.deepEqual(actual, expected);
+    assert.ok(people.every(person => person.image && person.imageSource.url === "user-provided:Batch 2-20261102T093641Z-1-001.zip"));
+  }
+  assert.doesNotMatch(html, /remedial|certificate received|8-Oct-2026|25-Sep-2026/i);
+  const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]);
+  assert.equal(new Set(ids).size, ids.length);
+});
+
+test("Batch 2 portraits have unique source mappings and 4:5 crop records", async () => {
+  const crops = JSON.parse(await readFile(new URL("../docs/batch-02-portrait-crops.json", import.meta.url), "utf8"));
+  assert.equal(crops.length, 19);
+  assert.equal(new Set(crops.map(crop => crop.output)).size, 19);
+  for (const person of [...graduates, ...participants].filter(person => person.batchId === "batch-02")) {
+    const crop = crops.find(crop => crop.displayName === person.displayName);
+    assert.equal(crop.output, person.image);
+    assert.equal(crop.source, person.imageSource.label);
+    assert.ok(Math.abs(crop.crop.height / crop.crop.width - 1.25) < 0.002);
+    await readFile(new URL(`../src${person.image}`, import.meta.url));
+  }
 });

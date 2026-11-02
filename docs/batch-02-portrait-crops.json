@@ -1,0 +1,211 @@
+[
+  {
+    "displayName": "Alexa Tiara",
+    "source": "Batch 2/Alexa Tiara/Alexa Tiara.jpeg",
+    "crop": {
+      "x": 208,
+      "y": 230,
+      "width": 532,
+      "height": 665
+    },
+    "output": "/public/media/portraits/batch-02/alexa-tiara.webp"
+  },
+  {
+    "displayName": "Aurelia Salsabilla Almirah",
+    "source": "Batch 2/Aurelia Salsabilla Almirah/Aurelia Salsabilla Almirah.png",
+    "crop": {
+      "x": 311,
+      "y": 418,
+      "width": 451,
+      "height": 564
+    },
+    "output": "/public/media/portraits/batch-02/aurelia-salsabilla-almirah.webp"
+  },
+  {
+    "displayName": "DK Nena Tanda",
+    "source": "Batch 2/DK Nena Tanda/DK Nena Tanda.jpg",
+    "crop": {
+      "x": 171,
+      "y": 314,
+      "width": 417,
+      "height": 521
+    },
+    "output": "/public/media/portraits/batch-02/dk-nena-tanda.webp"
+  },
+  {
+    "displayName": "Dyah Citra Septiani",
+    "source": "Batch 2/Dyah Citra Septiani/Dyah Citra Septiani.png",
+    "crop": {
+      "x": 136,
+      "y": 116,
+      "width": 814,
+      "height": 1018
+    },
+    "output": "/public/media/portraits/batch-02/dyah-citra-septiani.webp"
+  },
+  {
+    "displayName": "Emi Endrawati",
+    "source": "Batch 2/Emi Endrawati/IMG_6935 - Emi Endrawati.jpg",
+    "crop": {
+      "x": 1200,
+      "y": 1714,
+      "width": 2142,
+      "height": 2678
+    },
+    "output": "/public/media/portraits/batch-02/emi-endrawati.webp"
+  },
+  {
+    "displayName": "Franita Yulianty",
+    "source": "Batch 2/Franita Yulianty/Franita Yulianty.jpeg",
+    "crop": {
+      "x": 190,
+      "y": 58,
+      "width": 705,
+      "height": 881
+    },
+    "output": "/public/media/portraits/batch-02/franita-yulianty.webp"
+  },
+  {
+    "displayName": "Gagang Mochamad",
+    "source": "Batch 2/Gagang Mochamad/Gagang Mochamad.jpg",
+    "crop": {
+      "x": 189,
+      "y": 384,
+      "width": 540,
+      "height": 675
+    },
+    "output": "/public/media/portraits/batch-02/gagang-mochamad.webp"
+  },
+  {
+    "displayName": "Hannah Victoria Charlotte",
+    "source": "Batch 2/Hannah Victoria Charlotte/Hannah Victoria Charlotte.png",
+    "crop": {
+      "x": 207,
+      "y": 174,
+      "width": 716,
+      "height": 895
+    },
+    "output": "/public/media/portraits/batch-02/hannah-victoria-charlotte.webp"
+  },
+  {
+    "displayName": "Heni Priska Nova Silalahi",
+    "source": "Batch 2/Heni Priska Nova Silalahi/IMG_3739 - Heni Priska.jpg",
+    "crop": {
+      "x": 997,
+      "y": 655,
+      "width": 1228,
+      "height": 1535
+    },
+    "output": "/public/media/portraits/batch-02/heni-priska-nova-silalahi.webp"
+  },
+  {
+    "displayName": "Ivana Angel Walangitan",
+    "source": "Batch 2/Ivana Angel Walangitan/Ivana Angel.jpeg",
+    "crop": {
+      "x": 97,
+      "y": 397,
+      "width": 540,
+      "height": 675
+    },
+    "output": "/public/media/portraits/batch-02/ivana-angel-walangitan.webp"
+  },
+  {
+    "displayName": "Jasmine Azura Alhabsyi",
+    "source": "Batch 2/Jasmine Azura Alhabsyi/Jasmine Azura.jpeg",
+    "crop": {
+      "x": 171,
+      "y": 218,
+      "width": 511,
+      "height": 639
+    },
+    "output": "/public/media/portraits/batch-02/jasmine-azura-alhabsyi.webp"
+  },
+  {
+    "displayName": "Jordea Gadisha Intan Pramesty",
+    "source": "Batch 2/Jordea Gadisha Intan Pramesty/Jordea Gadisha Intan Pramesty.png",
+    "crop": {
+      "x": 396,
+      "y": 535,
+      "width": 357,
+      "height": 446
+    },
+    "output": "/public/media/portraits/batch-02/jordea-gadisha-intan-pramesty.webp"
+  },
+  {
+    "displayName": "Lucky Febianto Sydharama",
+    "source": "Batch 2/Lucky Febianto/Lucky Febianto.jpeg",
+    "crop": {
+      "x": 180,
+      "y": 15,
+      "width": 665,
+      "height": 831
+    },
+    "output": "/public/media/portraits/batch-02/lucky-febianto-sydharama.webp"
+  },
+  {
+    "displayName": "Muhammad Waliyyulhaq",
+    "source": "Batch 2/Muhammad Waliyyulhaq/Muhammad Waliyyulhaq.jpeg",
+    "crop": {
+      "x": 640,
+      "y": 720,
+      "width": 2720,
+      "height": 3400
+    },
+    "output": "/public/media/portraits/batch-02/muhammad-waliyyulhaq.webp"
+  },
+  {
+    "displayName": "Mutiara Chairunnisa",
+    "source": "Batch 2/Mutiara Chairunnisa/IMG_7997 - Mutiara C.jpg",
+    "crop": {
+      "x": 699,
+      "y": 573,
+      "width": 1666,
+      "height": 2082
+    },
+    "output": "/public/media/portraits/batch-02/mutiara-chairunnisa.webp"
+  },
+  {
+    "displayName": "Nanies Nuraini Herdirina",
+    "source": "Batch 2/Nanies Herdirina/Nanies Herdirina.jpeg",
+    "crop": {
+      "x": 209,
+      "y": 51,
+      "width": 366,
+      "height": 458
+    },
+    "output": "/public/media/portraits/batch-02/nanies-nuraini-herdirina.webp"
+  },
+  {
+    "displayName": "Paradisa Chirana",
+    "source": "Batch 2/Paradisa Chirana/Paradisa Chirana.jpg",
+    "crop": {
+      "x": 222,
+      "y": 15,
+      "width": 819,
+      "height": 1024
+    },
+    "output": "/public/media/portraits/batch-02/paradisa-chirana.webp"
+  },
+  {
+    "displayName": "Sheila Cynthya",
+    "source": "Batch 2/Sheila Cynthya/Sheila Cynthya.jpeg",
+    "crop": {
+      "x": 294,
+      "y": 320,
+      "width": 660,
+      "height": 825
+    },
+    "output": "/public/media/portraits/batch-02/sheila-cynthya.webp"
+  },
+  {
+    "displayName": "Windy Rondonuwu",
+    "source": "Batch 2/Windy Rondonuwu/Windy Rondonuwu.jpg",
+    "crop": {
+      "x": 115,
+      "y": 41,
+      "width": 838,
+      "height": 1048
+    },
+    "output": "/public/media/portraits/batch-02/windy-rondonuwu.webp"
+  }
+]

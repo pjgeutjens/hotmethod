@@ -8,7 +8,9 @@
     "imageSource": {
       "url": "https://nadpilatesbarre.my.canva.site/bentangbahagiaxashta-partnership",
       "label": "Kay Putri"
-    }
+    },
+    "graduationDate": "2026-10-26",
+    "graduationOrder": 6
   },
   {
     "batchId": "batch-01",
@@ -19,18 +21,9 @@
     "imageSource": {
       "url": "user-provided:google-photos/IMG_4650.jpg",
       "label": "Noor Anugrahandina · IMG_4650.jpg · owner-confirmed 2 Aug 2026"
-    }
-  },
-  {
-    "batchId": "batch-01",
-    "displayName": "Cindy Wowor",
-    "fullName": "Cindy Wowor",
-    "initials": "CW",
-    "image": "/public/media/graduates/cindy-wowor.webp",
-    "imageSource": {
-      "url": "https://nadpilatesbarre.my.canva.site/bentangbahagiaxashta-partnership",
-      "label": "Cindy Wowor"
-    }
+    },
+    "graduationDate": "2026-08-26",
+    "graduationOrder": 5
   },
   {
     "batchId": "batch-01",
@@ -41,40 +34,22 @@
     "imageSource": {
       "url": "https://nadpilatesbarre.my.canva.site/bentangbahagiaxashta-partnership",
       "label": "Jessica JJ"
-    }
-  },
-  {
-    "batchId": "batch-01",
-    "displayName": "Stefani Wibowo",
-    "fullName": "Stefani Wibowo",
-    "initials": "SW",
-    "image": "/public/media/graduates/stefani-wibowo.webp",
-    "imageSource": {
-      "url": "https://nadpilatesbarre.my.canva.site/bentangbahagiaxashta-partnership",
-      "label": "Stefani Huang"
-    }
+    },
+    "graduationDate": "2026-08-25",
+    "graduationOrder": 3
   },
   {
     "batchId": "batch-01",
     "displayName": "Jane Haryono",
-    "fullName": "Jane Haryono",
+    "fullName": "Janeley Haryono",
     "initials": "JH",
     "image": "/public/media/graduates/jane-haryono.webp",
     "imageSource": {
       "url": "https://nadpilatesbarre.my.canva.site/bentangbahagiaxashta-partnership",
       "label": "Jane Haryono"
-    }
-  },
-  {
-    "batchId": "batch-01",
-    "displayName": "Senny Desiana Medita",
-    "fullName": "Senny Desiana Medita",
-    "initials": "SD",
-    "image": "/public/media/graduates/senny-desiana-medita.webp",
-    "imageSource": {
-      "url": "https://nadpilatesbarre.my.canva.site/bentangbahagiaxashta-partnership",
-      "label": "Senny Achdiats"
-    }
+    },
+    "graduationDate": "2026-08-22",
+    "graduationOrder": 1
   },
   {
     "batchId": "batch-01",
@@ -85,29 +60,9 @@
     "imageSource": {
       "url": "https://nadpilatesbarre.my.canva.site/bentangbahagiaxashta-partnership",
       "label": "Masayu Putri"
-    }
-  },
-  {
-    "batchId": "batch-01",
-    "displayName": "Cut Amalia Andarini",
-    "fullName": "Cut Amalia Andarini",
-    "initials": "CA",
-    "image": "/public/media/graduates/cut-amalia-andarini.webp",
-    "imageSource": {
-      "url": "https://nadpilatesbarre.my.canva.site/bentangbahagiaxashta-partnership",
-      "label": "Cut Amalia"
-    }
-  },
-  {
-    "batchId": "batch-01",
-    "displayName": "Angie Ayu Natasha",
-    "fullName": "Angie Ayu Natasha",
-    "initials": "AN",
-    "image": "/public/media/graduates/angie-ayu-natasha.webp",
-    "imageSource": {
-      "url": "https://nadpilatesbarre.my.canva.site/bentangbahagiaxashta-partnership",
-      "label": "Angie Ayu"
-    }
+    },
+    "graduationDate": "2026-08-25",
+    "graduationOrder": 4
   },
   {
     "batchId": "batch-01",
@@ -118,28 +73,57 @@
     "imageSource": {
       "url": "https://nadpilatesbarre.my.canva.site/bentangbahagiaxashta-partnership",
       "label": "Aisha Kirana"
-    }
-  },
-  {
-    "batchId": "batch-01",
-    "displayName": "Katya Aiko Kusuma",
-    "fullName": "Katya Aiko Kusuma",
-    "initials": "KA",
-    "image": "/public/media/graduates/katya-aiko-kusuma.webp",
-    "imageSource": {
-      "url": "https://nadpilatesbarre.my.canva.site/bentangbahagiaxashta-partnership",
-      "label": "Katya Aiko"
-    }
+    },
+    "graduationDate": "2026-11-01",
+    "graduationOrder": 7
   },
   {
     "batchId": "batch-01",
     "displayName": "Pebetsi Charnley",
-    "fullName": "Pebetsi Charnley",
+    "fullName": "Pebetsi Makgalemele",
     "initials": "PC",
     "image": "/public/media/graduates/pebetsi-charnley.webp",
     "imageSource": {
       "url": "user-provided:whatsapp/WhatsApp Image 2026-08-06 at 01.38.05.jpeg",
       "label": "Pebetsi Charnley · two WhatsApp photos · owner-confirmed 6 Aug 2026"
+    },
+    "graduationDate": null,
+    "graduationOrder": 2
+  },
+  {
+    "batchId": "batch-02",
+    "displayName": "Emi Endrawati",
+    "fullName": "Emi Endrawati",
+    "initials": "EE",
+    "image": "/public/media/portraits/batch-02/emi-endrawati.webp",
+    "graduationDate": "2026-10-08",
+    "imageSource": {
+      "url": "user-provided:Batch 2-20261102T093641Z-1-001.zip",
+      "label": "Batch 2/Emi Endrawati/IMG_6935 - Emi Endrawati.jpg"
+    }
+  },
+  {
+    "batchId": "batch-02",
+    "displayName": "Mutiara Chairunnisa",
+    "fullName": "Mutiara Chairunnisa",
+    "initials": "MC",
+    "image": "/public/media/portraits/batch-02/mutiara-chairunnisa.webp",
+    "graduationDate": "2026-10-08",
+    "imageSource": {
+      "url": "user-provided:Batch 2-20261102T093641Z-1-001.zip",
+      "label": "Batch 2/Mutiara Chairunnisa/IMG_7997 - Mutiara C.jpg"
+    }
+  },
+  {
+    "batchId": "batch-02",
+    "displayName": "Nanies Nuraini Herdirina",
+    "fullName": "Nanies Nuraini Herdirina",
+    "initials": "NN",
+    "image": "/public/media/portraits/batch-02/nanies-nuraini-herdirina.webp",
+    "graduationDate": "2026-09-25",
+    "imageSource": {
+      "url": "user-provided:Batch 2-20261102T093641Z-1-001.zip",
+      "label": "Batch 2/Nanies Herdirina/Nanies Herdirina.jpeg"
     }
   }
 ]

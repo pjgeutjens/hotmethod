@@ -78,7 +78,7 @@ h2 { font-size: clamp(3.5rem, 8vw, 7.6rem); }
 .heat-2 { background: var(--campaign-clay); }
 .heat-3 { background: var(--campaign-taupe); }
 .graduate-name { margin-top: .9rem; }
-.graduate-name h3 { font-family: var(--serif); font-size: clamp(1.25rem, 2vw, 1.65rem); line-height: 1.06; font-weight: 400; margin: 0; }
+.graduate-name h4 { font-family: var(--serif); font-size: clamp(1.25rem, 2vw, 1.65rem); line-height: 1.06; font-weight: 400; margin: 0; }
 .graduate-name p { margin: .5rem 0 0; color: var(--muted); font-size: .72rem; line-height: 1.45; }
 
 .handoff { border-top: 1px solid var(--line); }
@@ -111,7 +111,7 @@ h2 { font-size: clamp(3.5rem, 8vw, 7.6rem); }
 
 @media (max-width: 440px) {
   .graduate-grid { gap: 2rem .75rem; }
-  .graduate-name h3 { font-size: 1.12rem; }
+  .graduate-name h4 { font-size: 1.12rem; }
   .hero-actions { align-items: stretch; flex-direction: column; }
   .button { width: 100%; }
 }
@@ -120,3 +120,6 @@ h2 { font-size: clamp(3.5rem, 8vw, 7.6rem); }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
+
+.roster-group-title { font-family: var(--serif); font-size: 1.8rem; font-weight: 400; margin: 0 0 2rem; }
+.graduate-grid + .roster-group-title { margin-top: clamp(3rem, 7vw, 6rem); }

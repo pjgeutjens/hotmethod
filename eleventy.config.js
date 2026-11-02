@@ -9,6 +9,16 @@ export default function (eleventyConfig) {
     )
   );
 
+  eleventyConfig.addFilter("sortRoster", (values = []) =>
+    [...values].sort((left, right) => {
+      if (left.batchId === right.batchId && left.graduationOrder && right.graduationOrder) {
+        return left.graduationOrder - right.graduationOrder;
+      }
+      const dateOrder = (left.graduationDate || "9999-12-31").localeCompare(right.graduationDate || "9999-12-31");
+      return dateOrder || left.displayName.localeCompare(right.displayName, "en", { sensitivity: "base" });
+    })
+  );
+
   return {
     pathPrefix: process.env.SITE_PATH_PREFIX || "/",
     dir: {

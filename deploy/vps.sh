@@ -16,5 +16,5 @@ rsync --archive --delete --compress --human-readable \
   "$root/_site/" \
   "$host:/opt/hotmethod/"
 
-ssh "$host" 'test -f /opt/hotmethod/index.html'
+ssh "$host" 'sudo test -f /opt/hotmethod/index.html'
 printf 'Static site deployed to /opt/hotmethod.\n'

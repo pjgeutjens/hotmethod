@@ -8,8 +8,20 @@
     "dateLabel": "05–07 Jun 2026",
     "venue": "Union Yoga",
     "location": "Jakarta, Indonesia",
-    "graduateCount": 13,
+    "graduateCount": 7,
     "status": "published",
-    "source": "https://id.linkedin.com/in/nadyarudianto"
+    "source": "https://id.linkedin.com/in/nadyarudianto",
+    "participantCount": 13,
+    "titleSuffix": "graduates & participants."
+  },
+  {
+    "id": "batch-02",
+    "label": "Batch 02",
+    "name": "Batch 2",
+    "graduateCount": 3,
+    "participantCount": 19,
+    "titleSuffix": "graduates & participants.",
+    "status": "published",
+    "source": "user-direction:2026-11-02"
   }
 ]
